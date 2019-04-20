@@ -19,7 +19,7 @@ public class LoginSuccess extends SimpleUrlAuthenticationSuccessHandler {
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
         System.out.println("login Success");
-//        redirectStrategy.sendRedirect(request,response,"/home");
+        redirectStrategy.sendRedirect(request,response,"/home");
         super.onAuthenticationSuccess(request,response,authentication);
     }
 
